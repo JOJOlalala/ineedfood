@@ -6,7 +6,9 @@
 1. **Download and extract the Food11 dataset under folder dataset**
     ```bash
     # Download the dataset to the root folder
-    unzip food11.zip
+    mkdir datset
+    wget https://www.kaggle.com/api/v1/datasets/download/vermaavi/food11
+    unzip food11.zip # or use the data preprocessing pipeline to unzip
     ```
 
 2. **Install dependencies**
@@ -21,11 +23,16 @@ Run the Jupyter notebook:
 jupyter notebook notebook.ipynb
 ```
 
-The notebook will:
+The train.ipynb will:
 - Load the Food11 dataset from the root folder
 - Preprocess and prepare the data
 - Train the model
-- Evaluate performance
+- Evaluate performance in train and val dataset
+
+util.ipynb can retrieve history of previous performance.
+
+eval.ipynb for testing on test set.
+
 
 ## Dataset Structure
 
